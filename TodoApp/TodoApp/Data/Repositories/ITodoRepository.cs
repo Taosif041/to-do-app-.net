@@ -12,7 +12,7 @@ namespace TodoApp.Data.Repositories
         Task<TodoItem> AddAsync(TodoItem item);
         Task<TodoItem> UpdateAsync(TodoItem item);
 
-        Task<TodoItem> DeleteAsync(int id);
+        Task<bool> DeleteAsync(int id);
 
   
     }

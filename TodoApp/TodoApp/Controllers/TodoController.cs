@@ -57,9 +57,32 @@ namespace TodoApp.Controllers
             {
                 return BadRequest("The new item body is not properly written. @todo -> post request");
             }
-            var newItem = await _todoService.AddAsync(item);
+            var updatedItem = await _todoService.UpdateAsync(item);
+            if (updatedItem == null)
+            {
+                return NotFound();
+            }
+            return Ok(updatedItem);
+        }
 
-            return CreatedAtAction(nameof(GetById), new { item.Id }, newItem);
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            try
+            {
+                var isDeleted = await _todoService.DeleteAsync(id);
+                if (isDeleted == false)
+                {
+                    return NotFound();
+                }
+                return NoContent();
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in DeleteAsync: {ex.Message}");
+                return StatusCode(500, $"An error occurred while deleting the item. -> DeleteAsync. {ex.Message}");
+            }
         }
     }
 }

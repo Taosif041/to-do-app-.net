@@ -49,11 +49,31 @@ namespace TodoApp.Data.Repositories
         {
             await _connection.OpenAsync();
 
-            var parameters = new { Id = item.Id, Name = item.Name, IsCompleted = item.IsCompleted };
+            var parameters = new 
+            { 
+                Id = item.Id, 
+                Name = item.Name, 
+                IsCompleted = item.IsCompleted 
+            };
 
             await _connection.ExecuteAsync("UpdateTodoItem", parameters, commandType: CommandType.StoredProcedure);
 
             return item;
+        }
+
+        public async Task<bool> DeleteAsync(int id)
+        {
+            using (var connection = _connection.OpenAsync())
+            {
+
+                var parameters = new { Id = id };
+                Console.WriteLine(parameters);
+
+                var rowsAffected = await _connection.ExecuteAsync("DeleteTodoItem", parameters, commandType: CommandType.StoredProcedure);
+                Console.WriteLine("rowsAffected", rowsAffected);
+
+                return rowsAffected > 0;
+            }
         }
 
     }

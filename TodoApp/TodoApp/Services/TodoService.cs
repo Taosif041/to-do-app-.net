@@ -48,5 +48,20 @@ namespace TodoApp.Services
             }
             return await _todoRepository.UpdateAsync(item);
         }
+
+        public async Task<bool> DeleteAsync(int id)
+        {
+            var cuurentItem = await _todoRepository.GetByIdAsync(id);
+            Console.WriteLine(cuurentItem.Id);
+            if (cuurentItem == null)
+            {
+                throw new ArgumentException(nameof(id), "Item not found");
+            }
+            else
+            {
+                Console.WriteLine($"item found {cuurentItem.Id}");
+                return await _todoRepository.DeleteAsync(id);
+            }
+        }
     }
 }

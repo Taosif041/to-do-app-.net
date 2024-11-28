@@ -10,5 +10,7 @@ namespace TodoApp.Services
         Task<TodoItem> GetByIdAsync(int id);
         Task<TodoItem> AddAsync(TodoItem item); 
         Task<TodoItem> UpdateAsync(TodoItem item);
+
+        Task<bool> DeleteAsync(int id);
     }
 }

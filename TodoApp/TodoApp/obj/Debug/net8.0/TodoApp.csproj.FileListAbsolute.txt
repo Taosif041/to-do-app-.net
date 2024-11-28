@@ -69,3 +69,4 @@ D:\web api practice\TodoApp\TodoApp\obj\Debug\net8.0\refint\TodoApp.dll
 D:\web api practice\TodoApp\TodoApp\obj\Debug\net8.0\TodoApp.pdb
 D:\web api practice\TodoApp\TodoApp\obj\Debug\net8.0\TodoApp.genruntimeconfig.cache
 D:\web api practice\TodoApp\TodoApp\obj\Debug\net8.0\ref\TodoApp.dll
+D:\web api practice\TodoApp\TodoApp\obj\Debug\net8.0\TodoApp.sourcelink.json
