@@ -1,0 +1,65 @@
+ToDoApi/
+│
+├── Controllers/
+│   ├── TodoController.cs
+│
+├── Data/
+│   ├── TodoRepository.cs
+│
+├── DTOs/
+│   ├── TodoItemCreateDto.cs
+│   ├── TodoItemReadDto.cs
+│
+├── Models/
+│   ├── TodoItem.cs
+│
+├── Services/
+│   ├── ITodoService.cs
+│   ├── TodoService.cs
+│
+├── appsettings.json
+├── Program.cs
+├── ToDoApi.csproj
+
+
+
+ToDoApi/
+│
+├── Controllers/
+│   ├── TodoController.cs
+│
+├── Data/
+│   ├── Repositories/
+│   │   ├── ITodoRepository.cs
+│   │   ├── TodoRepository.cs
+│   ├── UnitOfWork/
+│       ├── IUnitOfWork.cs
+│       ├── UnitOfWork.cs
+│
+├── DTOs/
+│   ├── TodoItemCreateDto.cs
+│   ├── TodoItemReadDto.cs
+│
+├── Models/
+│   ├── TodoItem.cs
+│
+├── Services/
+│   ├── ITodoService.cs
+│   ├── TodoService.cs
+│
+├── Mappers/
+│   ├── AutoMapperProfile.cs
+│
+├── Middleware/
+│   ├── ExceptionMiddleware.cs
+│
+├── Utils/
+│   ├── Validators/
+│       ├── TodoValidator.cs
+│   ├── Helpers/
+│       ├── DateTimeHelper.cs
+│
+├── appsettings.json
+├── Program.cs
+├── ToDoApi.csproj
+
