@@ -47,8 +47,6 @@ namespace TodoApp.Data.Repositories
 
         public async Task<TodoItem> UpdateAsync(TodoItem item)
         {
-            await _connection.OpenAsync();
-
             var parameters = new 
             { 
                 Id = item.Id, 

@@ -41,7 +41,7 @@ namespace TodoApp.Services
             {
                 throw new ArgumentNullException(nameof(item), "Item cannot be null");
             }
-            var cuurentItem = _todoRepository.GetByIdAsync(item.Id);
+            var cuurentItem = await _todoRepository.GetByIdAsync(item.Id);
             if (cuurentItem == null)
             {
                 throw new ArgumentException(nameof(item), "Item not found");

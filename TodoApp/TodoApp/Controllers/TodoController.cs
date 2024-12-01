@@ -55,15 +55,25 @@ namespace TodoApp.Controllers
         {
             if (item == null)
             {
-                return BadRequest("The new item body is not properly written. @todo -> post request");
+                return BadRequest("Item cannot be null.");
             }
+
+            // Ensure the item has a valid ID (assuming ID is required for updates)
+            if (item.Id <= 0)
+            {
+                return NotFound("Invalid item ID.");
+            }
+
             var updatedItem = await _todoService.UpdateAsync(item);
+
             if (updatedItem == null)
             {
-                return NotFound();
+                return NotFound("Item not found.");
             }
+
             return Ok(updatedItem);
         }
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
