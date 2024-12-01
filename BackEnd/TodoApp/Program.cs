@@ -24,6 +24,17 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+// Add CORS configuration
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200") // Replace with your frontend URL
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 
 var app = builder.Build();
 
@@ -33,6 +44,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Use CORS in the middleware pipeline
+app.UseCors("AllowAngularApp");
+
 
 app.UseHttpsRedirection();
 app.UseAuthorization();

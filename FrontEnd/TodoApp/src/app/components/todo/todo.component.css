@@ -1,0 +1,20 @@
+.todo-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  input {
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    margin-left: 5px;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+  }
+  

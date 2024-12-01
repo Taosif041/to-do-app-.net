@@ -1,0 +1,24 @@
+<div class="todo-container">
+    <h1>TodoApp</h1>
+  
+    <!-- Add Todo -->
+    <div>
+      <input [(ngModel)]="newTodo.name" placeholder="Enter todo" />
+      <button (click)="addTodo()">Add Todo</button>
+    </div>
+  
+    <!-- Todo List -->
+    <ul>
+      <li *ngFor="let todo of todos">
+        <span [ngClass]="{'completed': todo.isCompleted}">{{ todo.name }}</span>
+        <button (click)="deleteTodo(todo)">Delete</button>
+      </li>
+    </ul>
+  
+    <!-- Edit Todo -->
+    <!-- <div *ngIf="editTodo">
+      <input [(ngModel)]="editTodo.name" placeholder="Edit todo" />
+      <button (click)="updateTodo()">Update</button>
+    </div> -->
+  </div>
+  

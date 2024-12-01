@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\web api practice\\TodoApp\\TodoApp\\TodoApp.csproj": {}
+    "D:\\web api practice\\BackEnd\\TodoApp\\TodoApp.csproj": {}
   },
   "projects": {
-    "D:\\web api practice\\TodoApp\\TodoApp\\TodoApp.csproj": {
+    "D:\\web api practice\\BackEnd\\TodoApp\\TodoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\web api practice\\TodoApp\\TodoApp\\TodoApp.csproj",
+        "projectUniqueName": "D:\\web api practice\\BackEnd\\TodoApp\\TodoApp.csproj",
         "projectName": "TodoApp",
-        "projectPath": "D:\\web api practice\\TodoApp\\TodoApp\\TodoApp.csproj",
+        "projectPath": "D:\\web api practice\\BackEnd\\TodoApp\\TodoApp.csproj",
         "packagesPath": "C:\\Users\\TN-99496\\.nuget\\packages\\",
-        "outputPath": "D:\\web api practice\\TodoApp\\TodoApp\\obj\\",
+        "outputPath": "D:\\web api practice\\BackEnd\\TodoApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TN-99496\\AppData\\Roaming\\NuGet\\NuGet.Config",
